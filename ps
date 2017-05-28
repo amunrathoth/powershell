@@ -1,0 +1,62 @@
+$a = 7
+If ($a –gt 4) {
+Write-Host “Greater than 4!”
+}
+
+#####################
+If ($a –gt 4) {
+Write-Host “Greater than 4!”
+} else {
+                Write-Host “Value is less than 4!”
+}
+################################################################
+# Size comparison 
+$size = “M”
+If ($size –eq “S”) {
+                Write-Host "Small"
+} else {
+                If ($size –eq “M”) {
+                                Write-Host "Medium"
+                } else {
+                                If ($size –eq "L") {
+                                                Write-Host "Large"
+                                }else {
+                                                Write-Host "Unknown Size"
+                                }
+                }
+}
+##############################################################
+ipconfig | find "IP Address"
+$str1="Hello"
+write-output $str1 + $str2
+################
+Get-WMIObject Win32_BIOS
+Get-WMIObject Win32_ComputerSystem
+Get-WMIObject list
+Get-WMIObject list | where {$_.name.startswith(Win32_)}
+Get-WMIObject IISWebService namespace root\MicrosoftIISV
+########################################operands
+Operator 	Description
+-eq 	Equal to
+-lt 	Less than
+-gt 	Greater than
+-ge 	Greater than or Equal to
+-le 	Less than or equal to
+-ne 	Not Equal to
+-is 	Returns TRUE if value is a certain data type
+-isnot 	Returns TRUE if the value is not a certain data type
+-like 	Like (uses Wildcard for pattern matching)
+-notlike 	Not like (uses wildcard for pattern searching)
+-match 	A match using regular expressions
+-contains 	Used to see whether a collection or group of items contains a given term.
+-notcontains 	Used to see whether a collection or group of items does not contain a given item.
+##################
+dir c:\windows\system32 | find ".exe"
+Get-ChildItem c:\windows\system32 | Format-Table
+Get-ChildItem c:\windows\system32 | Format-List
+Get-ChildItem c:\windows\system32 | Format-Wide
+
+
+
+
+
